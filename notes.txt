@@ -1,0 +1,7 @@
+To start server:
+Type "npm i -g http-server" into terminal command line
+Type http-server into terminal command line
+Click on it in ports
+
+Reference Website:
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
