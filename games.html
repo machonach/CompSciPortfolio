@@ -21,6 +21,8 @@
                 background-color:#131312;
             }
 
+            /* NAVBAR */
+
             #navbar{
                 height:150px;
                 background-color:#003153;
@@ -28,7 +30,7 @@
                 display:flex;
                 align-items:center;
                 justify-content:space-between;
-                padding:0 20px;
+                padding:0px 20px;
                 width:100%;
             }
 
@@ -99,12 +101,15 @@
                 }
             }
 
+            /* GAME LINKS */
+
             #game-container{
                 display:grid;
                 grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
                 gap:20px;
                 justify-items:center;
                 margin:20px;
+                min-height:100vh;
             }
 
             .game-card{
@@ -118,6 +123,7 @@
                 align-items:center;
                 text-align:center;
                 min-height:250px;
+                max-height:300px;
                 cursor:pointer;
                 text-decoration:none;
             }
@@ -140,6 +146,47 @@
             .instructions{
                 font-size:16px;
                 color:#FF0000;
+            }
+
+            /* FOOTER */
+
+            footer{
+                background-color:#2F2F2F;
+                color:#FFFFFF;
+                width:100%;
+                padding:20px 0px;
+                bottom:0;
+                text-align:center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+
+            footer .footer-content{
+                display:flex;
+                align-items:center;
+                gap:50px;
+            }
+
+            footer .footer-link{
+                color:#FFFFFF;
+                text-decoration:none;
+                font-size:25px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .footer-link:hover{
+                transform:scale(1.1);
+            }
+
+            footer .social-icons a img{
+                width:75px;
+                height:75px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .social-icons a img:hover{
+                transform:scale(1.1);
             }
         </style>
     </head>
@@ -168,6 +215,17 @@
                 <p class="instructions">How to play: Click or tap on the target as fast as possible, as soon as it appears.</p>
             </a>
         </section>
+
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html" class="footer-link">Contact Me</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
+                        <img src="ig-logo.png" alt="Instagram"/>
+                    </a>
+                </div>
+            </div>
+        </footer>
 
         <script type="text/javascript">
             document.getElementById("hamburger").addEventListener("click", function(){

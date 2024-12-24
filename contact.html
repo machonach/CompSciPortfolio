@@ -21,6 +21,8 @@
                 background-color:#131312;
             }
 
+            /* NAVBAR */
+
             #navbar{
                 height:150px;
                 background-color:#003153;
@@ -28,7 +30,7 @@
                 display:flex;
                 align-items:center;
                 justify-content:space-between;
-                padding:0 20px;
+                padding:0px 20px;
                 width:100%;
             }
 
@@ -98,6 +100,92 @@
                     display:block;
                 }
             }
+
+            /* CONTACTS */
+
+            #contact{
+                min-height:100vh;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            }
+
+            #email-header{
+                font-size:40px;
+                margin-top:40px; 
+            }
+
+            #captcha-container{
+                margin:20px 0px;
+            }
+
+            #captcha-checkbox:hover{
+                cursor:pointer;
+            }
+
+            #reveal-button{
+                padding:10px 20px;
+                font-size:16px;
+                cursor:pointer;
+                background-color:#4CAF50;
+                color:white;
+                border:none;
+                border-radius:5px;
+                transition:transform 0.3s ease;
+            }
+
+            #reveal-button:hover{
+                transform:scale(1.1)
+            }
+
+            #email{
+                font-size:40px;
+                font-weight:bold;
+                color:#F2F2F2;
+                margin-top:20px;
+                display:none;
+            }
+
+            /* FOOTER */
+
+            footer{
+                background-color:#2F2F2F;
+                color:#FFFFFF;
+                width:100%;
+                padding:20px 0px;
+                bottom:0;
+                text-align:center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+
+            footer .footer-content{
+                display:flex;
+                align-items:center;
+                gap:50px;
+            }
+
+            footer .footer-link{
+                color:#FFFFFF;
+                text-decoration:none;
+                font-size:25px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .footer-link:hover{
+                transform:scale(1.1);
+            }
+
+            footer .social-icons a img{
+                width:75px;
+                height:75px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .social-icons a img:hover{
+                transform:scale(1.1);
+            }
         </style>
     </head>
 
@@ -117,11 +205,63 @@
                 <div></div>
             </div>
         </nav>
+
+        <section id="contact">
+            <h1 id="email-header">Contact Me by Email</h1>
+
+            <div id="captcha-container">
+                <input type="checkbox" id="captcha-checkbox">
+                <label for="captcha-checkbox" id="checkbox-label">I am not a robot</label>
+            </div>
+
+            <button id="reveal-button">Reveal Email</button>
+        
+            <h1 id="email">oghosh22009@gmail.com</h1>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html" class="footer-link">Contact Me</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
+                        <img src="ig-logo.png" alt="Instagram"/>
+                    </a>
+                </div>
+            </div>
+        </footer>
         
         <script type="text/javascript">
             document.getElementById("hamburger").addEventListener("click", function(){
                 const navLinks = document.querySelector(".nav-links");
                 navLinks.classList.toggle("active");
+            });
+
+            document.getElementById("reveal-button").addEventListener("click", function(){
+                const checkbox = document.getElementById("captcha-checkbox");
+                const email = document.getElementById("email");
+                const button = document.getElementById("reveal-button");
+
+                if (!checkbox.checked){
+                    alert("Please confirm you are not a robot!");
+                }else{
+                    if (email.style.display === "block"){
+                        email.style.display = "none";
+                        button.textContent = "Reveal Email";
+                    }else{
+                        email.style.display = "block";
+                        button.textContent = "Hide Email";
+                    }
+                }
+            });
+
+            document.getElementById("captcha-checkbox").addEventListener("change", function(){
+                const email = document.getElementById("email");
+                const button = document.getElementById("reveal-button");
+
+                if (!this.checked) {
+                    email.style.display = "none";
+                    button.textContent = "Reveal Email";
+                }
             });
         </script>
     </body>

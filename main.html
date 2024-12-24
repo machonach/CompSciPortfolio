@@ -20,6 +20,8 @@
                 background-color:#131312;
             }
 
+            /* NAVBAR */
+
             #navbar{
                 height:150px;
                 background-color:#003153;
@@ -27,7 +29,7 @@
                 display:flex;
                 align-items:center;
                 justify-content:space-between;
-                padding:0 20px;
+                padding:0px 20px;
                 width:100%;
             }
 
@@ -98,6 +100,8 @@
                 }
             }
 
+            /* HERO */
+
             #hero{
                 height:100vh;
                 width:100%;
@@ -139,6 +143,183 @@
                 margin-left:50px;
                 margin-right:50px;
             }
+
+            /* ABOUT ME */
+
+            #about-me{
+                display:flex;
+                flex-direction:row;
+                height:75vh;
+                justify-content:center;
+                margin-top:20px;
+            }
+
+            #about-me h1{
+                font-size:60px;
+                position:absolute;
+            }
+
+            #about-me div{
+                width:33.333%;
+                height:35vh;
+                margin:80px 20px;
+                padding:20px;
+                font-size:20px;
+                border-radius:10px;
+                background-color:#2F2F2F;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:space-between;
+                text-align:center;
+            }
+
+            #about-me #years-coding-value{
+                font-size:50px;
+            }
+
+            #about-me ul{
+                display:flex;
+                flex-direction:column;
+                height:100%;
+                justify-content:space-evenly;
+            }
+
+            @media (max-width:768px){
+                #about-me{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    margin-top:20vh;
+                }
+
+                #about-me h1{
+                    font-size:50px;
+                    position:relative;
+                }
+
+                #about-me div{
+                    width:90%;
+                    margin:60px 20px 0px 20px;
+                    padding:20px;
+                    font-size:20px;
+                    border-radius:10px;
+                    background-color:#2F2F2F;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    text-align:center;
+                }
+
+                #about-me #years-coding{
+                    margin-bottom:20vh;
+                }
+            }
+
+            /* JOKE & QUOTE */
+
+            #jokes-quotes{
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+                margin-top:20px;
+            }
+
+            #jokes-quotes h1{
+                font-size:60px;
+                position:absolute;
+            }
+
+            #jokes-quotes div{
+                width:45%;
+                height:35vh;
+                margin:80px 20px;
+                padding:20px;
+                font-size:20px;
+                border-radius:10px;
+                background-color:#2F2F2F;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:space-between;
+                text-align:center;
+            }
+
+            #jokes-quotes h3{
+                align-self:center;
+            }
+
+            @media (max-width:768px){
+                #jokes-quotes{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    margin-top:20vh;
+                }
+
+                #jokes-quotes h1{
+                    font-size:50px;
+                    position:relative;
+                }
+
+                #jokes-quotes div{
+                    width:90%;
+                    margin:60px 20px 0px 20px;
+                    padding:20px;
+                    font-size:20px;
+                    border-radius:10px;
+                    background-color:#2F2F2F;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    text-align:center;
+                }
+
+                #jokes-quotes #joke{
+                    margin-bottom:20vh;
+                }
+            }
+
+            /* FOOTER */
+
+            footer{
+                background-color:#2F2F2F;
+                color:#FFFFFF;
+                width:100%;
+                padding:20px 0px;
+                bottom:0;
+                text-align:center;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+
+            footer .footer-content{
+                display:flex;
+                align-items:center;
+                gap:50px;
+            }
+
+            footer .footer-link{
+                color:#FFFFFF;
+                text-decoration:none;
+                font-size:25px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .footer-link:hover{
+                transform:scale(1.1);
+            }
+
+            footer .social-icons a img{
+                width:75px;
+                height:75px;
+                transition:transform 0.3s ease;
+            }
+
+            footer .social-icons a img:hover{
+                transform:scale(1.1);
+            }
         </style>
     </head>
 
@@ -160,7 +341,7 @@
         </nav>
 
         <section id="hero">
-            <img id="background" src="https://www.nasa.gov/wp-content/uploads/2023/03/iss061e110433.jpg?w=1041" alt="Starry sky">
+            <img id="background" src="night-sky-hero.png" alt="Starry sky">
 
             <div id="highlight">
                 <img id="highlight-person" src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C8143Yr9oJsL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png">
@@ -172,8 +353,62 @@
         </section>
 
         <section id="about-me">
-            
+            <h1>About Me</h1>
+
+            <div id="interests">
+                <h2 id="interests-header">My Interests:</h2>
+
+                <ul id="interests-list">
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                </ul>
+            </div>
+
+            <div id="coding-languages">
+                <h2 id="coding-languages-header">Known Coding Languages:</h2>
+
+                <ul id="coding-languages-list">
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                    <li>Placeholder</li>
+                </ul>
+            </div>
+
+            <div id="years-coding">
+                <h2 id="years-coding-header">I have been coding for</h2>
+                <h3 id="years-coding-value">Placeholder</h3>
+                <h2 id="years-coding-final">years</h2>
+            </div>
         </section>
+
+        <section id="jokes-quotes">
+            <h1 id="jokes-quotes-header">A Joke & A Quote</h1>
+
+            <div id="quote">
+                <h2 id="quote-header">Quote of the Day</h2>
+
+                <h3 id="quote-text">Loading quote...</h3>
+            </div>
+            <div id="joke">
+                <h2 id="joke-header">Joke of the Day</h2>
+
+                <h3 id="joke-text">Loading joke...</h3>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <a href="contact.html" class="footer-link">Contact Me</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
+                        <img src="ig-logo.png" alt="Instagram"/>
+                    </a>
+                </div>
+            </div>
+        </footer>
         
         <script type="text/javascript">
             document.getElementById("hamburger").addEventListener("click", function(){
