@@ -8,99 +8,9 @@
 
         <title>Get In Touch</title>
         
+        <link rel="stylesheet" type="text/css" href="/workspaces/CompSciPortfolio/common-stylesheet.css">
+        
         <style type="text/css">
-            *{
-                margin:0px;
-                padding:0px;
-                box-sizing:border-box;
-            }
-
-            body{
-                font-family:Arial,sans-serif;
-                color:#F2F2F2;
-                background-color:#131312;
-            }
-
-            /* NAVBAR */
-
-            #navbar{
-                height:150px;
-                background-color:#003153;
-                opacity:0.75;
-                display:flex;
-                align-items:center;
-                justify-content:space-between;
-                padding:0px 20px;
-                width:100%;
-            }
-
-            #logo{
-                font-size:40px;
-                font-weight:bold;
-                color:#F2F2F2;
-            }
-
-            #navbar .nav-links{
-                display:flex;
-                gap:20px;
-            }
-
-            #navbar .nav-links a{
-                color:#F2F2F2;
-                text-decoration:none;
-                font-size:24px;
-                transition:transform 0.3s ease-in-out;
-            }
-
-            #navbar .nav-links a:hover{
-                transform:scale(1.1);
-            }
-
-            #navbar .hamburger{
-                display:none;
-                cursor:pointer;
-                transition:transform 0.3s ease-in-out;
-            }
-
-            .hamburger:hover{
-                transform:scale(1.1);
-            }
-
-            .hamburger div{
-                width:30px;
-                height:4px;
-                margin:5px 0px;
-                background-color:#F2F2F2;
-            }
-
-            @media (max-width:768px){
-                #navbar .nav-links{
-                    display:flex;
-                    flex-direction:column;
-                    gap:10px;
-                    pointer-events:none;
-                    opacity:0;
-                    transition:opacity 0.3s ease-in-out;
-                }
-
-                #navbar .nav-links a{
-                    transition:transform 0.3s ease-in-out;
-                }
-
-                #navbar .nav-links a:hover{
-                    transform:scale(1.1);
-                }
-
-                #navbar .nav-links.active{
-                    opacity:1;
-                    pointer-events:auto;
-                }
-
-                #navbar .hamburger{
-                    display:block;
-                }
-            }
-
             /* CONTACTS */
 
             #contact{
@@ -145,47 +55,6 @@
                 margin-top:20px;
                 display:none;
             }
-
-            /* FOOTER */
-
-            footer{
-                background-color:#2F2F2F;
-                color:#FFFFFF;
-                width:100%;
-                padding:20px 0px;
-                bottom:0;
-                text-align:center;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-            }
-
-            footer .footer-content{
-                display:flex;
-                align-items:center;
-                gap:50px;
-            }
-
-            footer .footer-link{
-                color:#FFFFFF;
-                text-decoration:none;
-                font-size:25px;
-                transition:transform 0.3s ease;
-            }
-
-            footer .footer-link:hover{
-                transform:scale(1.1);
-            }
-
-            footer .social-icons a img{
-                width:75px;
-                height:75px;
-                transition:transform 0.3s ease;
-            }
-
-            footer .social-icons a img:hover{
-                transform:scale(1.1);
-            }
         </style>
     </head>
 
@@ -224,7 +93,7 @@
                 <a href="contact.html" class="footer-link">Contact Me</a>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
-                        <img src="ig-logo.png" alt="Instagram"/>
+                        <img src="/workspaces/CompSciPortfolio/images/ig-logo.png" alt="Instagram"/>
                     </a>
                 </div>
             </div>

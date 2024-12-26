@@ -5,145 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        
         <title>Portfolio</title>
-
+        
+        <link rel="stylesheet" type="text/css" href="/workspaces/CompSciPortfolio/common-stylesheet.css">
+        
         <style type="text/css">
-            *{
-                margin:0px;
-                padding:0px;
-                box-sizing:border-box;
-            }
-
-            body{
-                font-family:Arial,sans-serif;
-                color:#F2F2F2;
-                background-color:#131312;
-            }
-
-            /* NAVBAR */
-
-            #navbar{
-                height:150px;
-                background-color:#003153;
-                opacity:0.75;
-                display:flex;
-                align-items:center;
-                justify-content:space-between;
-                padding:0px 20px;
-                width:100%;
-            }
-
-            #logo{
-                font-size:40px;
-                font-weight:bold;
-                color:#F2F2F2;
-            }
-
-            #navbar .nav-links{
-                display:flex;
-                gap:20px;
-            }
-
-            #navbar .nav-links a{
-                color:#F2F2F2;
-                text-decoration:none;
-                font-size:24px;
-                transition:transform 0.3s ease-in-out;
-            }
-
-            #navbar .nav-links a:hover{
-                transform:scale(1.1);
-            }
-
-            #navbar .hamburger{
-                display:none;
-                cursor:pointer;
-                transition:transform 0.3s ease-in-out;
-            }
-
-            .hamburger:hover{
-                transform:scale(1.1);
-            }
-
-            .hamburger div{
-                width:30px;
-                height:4px;
-                margin:5px 0px;
-                background-color:#F2F2F2;
-            }
-
-            @media (max-width:768px){
-                #navbar .nav-links{
-                    display:flex;
-                    flex-direction:column;
-                    gap:10px;
-                    pointer-events:none;
-                    opacity:0;
-                    transition:opacity 0.3s ease-in-out;
-                }
-
-                #navbar .nav-links a{
-                    transition:transform 0.3s ease-in-out;
-                }
-
-                #navbar .nav-links a:hover{
-                    transform:scale(1.1);
-                }
-
-                #navbar .nav-links.active{
-                    opacity:1;
-                    pointer-events:auto;
-                }
-
-                #navbar .hamburger{
-                    display:block;
-                }
-            }
-
-            /* HERO */
-
-            #hero{
-                height:100vh;
-                width:100%;
-                position:relative;
-                display:flex;
-                flex-direction:column;
-                align-items:center;
-                justify-content:center;
-                text-align:center;
-            }
-
-            #hero #background{
-                height:100%;
-                width:100%;
-                object-fit:cover;
-            }
-
-            #hero #highlight{
-                height:200px;
-                width:200px;
-                background-color:#F2F2F2;
-                border-radius:50%;
-                position:absolute;
-                overflow:hidden;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-            }
-
-            #hero #highlight-image{
-                height:100%;
-                width:100%;
-                object-fit:cover;
-            }
-
-            #hero #action{
-                position:absolute;
-                margin-top:275px;
-                margin-left:50px;
-                margin-right:50px;
-            }
-
             /* ABOUT ME */
 
             #about-me{
@@ -216,21 +83,21 @@
                 }
             }
 
-            /* JOKE & QUOTE */
+            /* JOKE*/
 
-            #jokes-quotes{
+            #jokes{
                 display:flex;
                 flex-direction:row;
                 justify-content:center;
                 margin-top:20px;
             }
 
-            #jokes-quotes h1{
+            #jokes h1{
                 font-size:60px;
                 position:absolute;
             }
 
-            #jokes-quotes div{
+            #jokes div{
                 width:45%;
                 height:35vh;
                 margin:80px 20px;
@@ -245,24 +112,24 @@
                 text-align:center;
             }
 
-            #jokes-quotes h3{
+            #jokes h3{
                 align-self:center;
             }
 
             @media (max-width:768px){
-                #jokes-quotes{
+                #jokes{
                     display:flex;
                     flex-direction:column;
                     align-items:center;
                     margin-top:20vh;
                 }
 
-                #jokes-quotes h1{
+                #jokes h1{
                     font-size:50px;
                     position:relative;
                 }
 
-                #jokes-quotes div{
+                #jokes div{
                     width:90%;
                     margin:60px 20px 0px 20px;
                     padding:20px;
@@ -275,50 +142,9 @@
                     text-align:center;
                 }
 
-                #jokes-quotes #joke{
+                #jokes #joke{
                     margin-bottom:20vh;
                 }
-            }
-
-            /* FOOTER */
-
-            footer{
-                background-color:#2F2F2F;
-                color:#FFFFFF;
-                width:100%;
-                padding:20px 0px;
-                bottom:0;
-                text-align:center;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-            }
-
-            footer .footer-content{
-                display:flex;
-                align-items:center;
-                gap:50px;
-            }
-
-            footer .footer-link{
-                color:#FFFFFF;
-                text-decoration:none;
-                font-size:25px;
-                transition:transform 0.3s ease;
-            }
-
-            footer .footer-link:hover{
-                transform:scale(1.1);
-            }
-
-            footer .social-icons a img{
-                width:75px;
-                height:75px;
-                transition:transform 0.3s ease;
-            }
-
-            footer .social-icons a img:hover{
-                transform:scale(1.1);
             }
         </style>
     </head>
@@ -341,7 +167,7 @@
         </nav>
 
         <section id="hero">
-            <img id="background" src="night-sky-hero.png" alt="Starry sky">
+            <img id="background" src="/workspaces/CompSciPortfolio/images/night-sky-hero.png" alt="Starry sky">
 
             <div id="highlight">
                 <img id="highlight-person" src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C8143Yr9oJsL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png">
@@ -359,10 +185,7 @@
                 <h2 id="interests-header">My Interests:</h2>
 
                 <ul id="interests-list">
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
+                    <!-- JSON File will put in list items -->
                 </ul>
             </div>
 
@@ -370,30 +193,22 @@
                 <h2 id="coding-languages-header">Known Coding Languages:</h2>
 
                 <ul id="coding-languages-list">
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
-                    <li>Placeholder</li>
+                    <!-- JSON File will put in list items -->
                 </ul>
             </div>
 
             <div id="years-coding">
                 <h2 id="years-coding-header">I have been coding for</h2>
-                <h3 id="years-coding-value">Placeholder</h3>
+                <h3 id="years-coding-value"><!-- JSON File will put in value --></h3>
                 <h2 id="years-coding-final">years</h2>
             </div>
         </section>
 
-        <section id="jokes-quotes">
-            <h1 id="jokes-quotes-header">A Joke & A Quote</h1>
+        <section id="jokes">
+            <h1 id="jokes-header">Joke of the Moment</h1>
 
-            <div id="quote">
-                <h2 id="quote-header">Quote of the Day</h2>
-
-                <h3 id="quote-text">Loading quote...</h3>
-            </div>
             <div id="joke">
-                <h2 id="joke-header">Joke of the Day</h2>
+                <h2 id="joke-header">(It's gonna be corny)</h2>
 
                 <h3 id="joke-text">Loading joke...</h3>
             </div>
@@ -404,17 +219,12 @@
                 <a href="contact.html" class="footer-link">Contact Me</a>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
-                        <img src="ig-logo.png" alt="Instagram"/>
+                        <img src="/workspaces/CompSciPortfolio/images/ig-logo.png" alt="Instagram"/>
                     </a>
                 </div>
             </div>
         </footer>
         
-        <script type="text/javascript">
-            document.getElementById("hamburger").addEventListener("click", function(){
-                const navLinks = document.querySelector(".nav-links");
-                navLinks.classList.toggle("active");
-            });
-        </script>
+        <script src="javascript/main-javascript.js" type="text/javascript"></script>
     </body>
 </html>
