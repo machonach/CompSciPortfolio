@@ -25,10 +25,12 @@ function randomizeTarget(){
 function targetAppear() {
     const targetStyle = document.getElementById("target").style;
     targetStyle.display = "none";
+    targetStyle.pointerEvents = "none";
 
     setTimeout(() => {
         randomizeTarget();
         targetStyle.display = "block";
+        targetStyle.pointerEvents = "auto";
         startTime = new Date().getTime();
     }, Math.random() * 2000 + 500);
 }

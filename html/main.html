@@ -4,13 +4,57 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <title>Portfolio</title>
         
-        <link rel="stylesheet" type="text/css" href="/workspaces/CompSciPortfolio/common-stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="/common-stylesheet.css">
         
         <style type="text/css">
+            /* HERO */
+
+            #hero{
+                height:100vh;
+                width:100%;
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+            }
+
+            #hero #background{
+                height:100%;
+                width:100%;
+                object-fit:cover;
+            }
+
+            #hero #highlight{
+                height:200px;
+                width:200px;
+                background-color:#F2F2F2;
+                border-radius:50%;
+                position:absolute;
+                overflow:hidden;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+            #hero #highlight-image{
+                height:100%;
+                width:100%;
+                object-fit:cover;
+            }
+
+            #hero #action{
+                position:absolute;
+                margin-top:275px;
+                margin-left:50px;
+                margin-right:50px;
+            }
+
             /* ABOUT ME */
 
             #about-me{
@@ -150,6 +194,8 @@
     </head>
 
     <body>
+        <noscript style="font-size:50px; color:#FF5000;">Please enable JavaScript for proper site functionality. Click on the 3 dots in the top right corner, it can be enabled in website settings.</noscript>
+        
         <nav id="navbar">
             <div id="logo">
                 Portfolio
@@ -167,14 +213,14 @@
         </nav>
 
         <section id="hero">
-            <img id="background" src="/workspaces/CompSciPortfolio/images/night-sky-hero.png" alt="Starry sky">
+            <img id="background" src="/images/night-sky-hero.png" alt="Starry sky">
 
             <div id="highlight">
-                <img id="highlight-person" src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C8143Yr9oJsL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png">
+                <img id="highlight-person" src="/images/philosopher.png">
             </div>
 
             <div id="action">
-                <h1>Hello, my name's Om. Check out this page about me.</h1>
+                <h1>Hello, my name's Om. I drew the above picture myself.</h1>
             </div>
         </section>
 
@@ -219,12 +265,12 @@
                 <a href="contact.html" class="footer-link">Contact Me</a>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
-                        <img src="/workspaces/CompSciPortfolio/images/ig-logo.png" alt="Instagram"/>
+                        <img src="/images/ig-logo.png" alt="Instagram"/>
                     </a>
                 </div>
             </div>
         </footer>
         
-        <script src="javascript/main-javascript.js" type="text/javascript"></script>
+        <script src="/javascript/main-javascript.js" type="text/javascript"></script>
     </body>
 </html>

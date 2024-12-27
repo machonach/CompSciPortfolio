@@ -5,10 +5,10 @@ document.getElementById("hamburger").addEventListener("click", function(){
 
 // ABOUT ME JSON
 
-fetch('about-me.json')
+fetch("https://raw.githubusercontent.com/machonach/CompSciPortfolio/1fb2c44043b3b6db7b7b957b053be99aa3ca0c49/about-me.json")
 .then(response =>{
     if (!response.ok){
-        throw new Error('Error fetching data');
+        throw new Error("Error fetching data");
     }else{
         return response.json();
     };
@@ -29,36 +29,31 @@ fetch('about-me.json')
         languagesList.appendChild(li);
     });
         
-    document.getElementById('years-coding-value').textContent = data.yearsCoding;
+    document.getElementById("years-coding-value").textContent = data.yearsCoding;
 })
 
 .catch(error => {
     console.error("Error fetching data");
 
-    const li = document.createElement("li");
-
-    const languagesList = document.getElementById("coding-languages-list");
-    li.textContent = "Failed to load coding languages";
-    languagesList.appendChild(li);
-
     const interestsList = document.getElementById("interests-list");
-    li.textContent = "Failed to load interests";
-    interestsList.appendChild(li);
+    const interestError = document.createElement("li");
+    interestError.textContent = "Failed to load information";
+    interestsList.appendChild(interestError);
 });
 
 // JOKE OF THE MOMENT
 
 fetch("https://icanhazdadjoke.com/",{
-    method:'GET',
+    method:"GET",
     headers:{
-        'Accept':'application/json',
-        'User-Agent':'Portfolio Website CS Team Audition Project (https://github.com/machonach/CompSciPortfolio)'
+        "Accept":"application/json",
+        "User-Agent":"Portfolio Website CS Team Audition Project (https://github.com/machonach/CompSciPortfolio)"
     }
 })
 
 .then(response =>{
     if (!response.ok){
-        throw new Error('Error fetching data');
+        throw new Error("Error fetching data");
     }else{
         return response.json();
     };

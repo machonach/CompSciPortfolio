@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Get In Touch</title>
         
-        <link rel="stylesheet" type="text/css" href="/workspaces/CompSciPortfolio/common-stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="/common-stylesheet.css">
         
         <style type="text/css">
             /* CONTACTS */
@@ -59,6 +59,8 @@
     </head>
 
     <body>
+        <noscript style="font-size:50px; color:#FF5000;">Please enable JavaScript for proper site functionality. Click on the 3 dots in the top right corner, it can be enabled in website settings.</noscript>
+
         <nav id="navbar">
             <div id="logo">
                 Portfolio
@@ -93,7 +95,7 @@
                 <a href="contact.html" class="footer-link">Contact Me</a>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/machnach0/" target="_blank" aria-label="Instagram">
-                        <img src="/workspaces/CompSciPortfolio/images/ig-logo.png" alt="Instagram"/>
+                        <img src="/images/ig-logo.png" alt="Instagram"/>
                     </a>
                 </div>
             </div>
@@ -111,7 +113,7 @@
                 const button = document.getElementById("reveal-button");
 
                 if (!checkbox.checked){
-                    alert("Please confirm you are not a robot!");
+                    alert("Please confirm you are not a robot.");
                 }else{
                     if (email.style.display === "block"){
                         email.style.display = "none";
