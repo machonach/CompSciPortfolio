@@ -5,7 +5,7 @@ document.getElementById("hamburger").addEventListener("click", function(){
 
 // ABOUT ME JSON
 
-fetch("https://raw.githubusercontent.com/machonach/CompSciPortfolio/1fb2c44043b3b6db7b7b957b053be99aa3ca0c49/about-me.json")
+fetch("/html/about-me.json")
 .then(response =>{
     if (!response.ok){
         throw new Error("Error fetching data");
